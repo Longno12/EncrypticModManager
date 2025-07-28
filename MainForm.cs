@@ -1144,10 +1144,10 @@ exit";
                 BorderStyle = BorderStyle.None,
                 ReadOnly = true,
                 Text = "Dashboard Tab\n\n" +
-                       "• Game Information: Shows the status, path, and version of your Gorilla Tag installation\n\n" +
-                       "• Install BepInEx: Installs the mod framework required for all mods\n\n" +
-                       "• Install Menu: Installs the Encryptic menu mod\n\n" +
-                       "• Launch Game: Starts Gorilla Tag with your current mods"
+                       "Â• Game Information: Shows the status, path, and version of your Gorilla Tag installation\n\n" +
+                       "Â• Install BepInEx: Installs the mod framework required for all mods\n\n" +
+                       "Â• Install Menu: Installs the Encryptic menu mod\n\n" +
+                       "Â• Launch Game: Starts Gorilla Tag with your current mods"
             };
 
             TabPage modsHelp = new TabPage("Mods")
@@ -1164,11 +1164,11 @@ exit";
                 BorderStyle = BorderStyle.None,
                 ReadOnly = true,
                 Text = "Mods Tab\n\n" +
-                       "• Install: Add a new mod from a .dll file\n\n" +
-                       "• Uninstall: Remove the selected mod\n\n" +
-                       "• Enable/Disable: Toggle mods on or off without removing them\n\n" +
-                       "• Refresh: Update the mod list\n\n" +
-                       "• Search: Filter mods by name"
+                       "Â• Install: Add a new mod from a .dll file\n\n" +
+                       "Â• Uninstall: Remove the selected mod\n\n" +
+                       "Â• Enable/Disable: Toggle mods on or off without removing them\n\n" +
+                       "Â• Refresh: Update the mod list\n\n" +
+                       "Â• Search: Filter mods by name"
             };
 
             modsHelp.Controls.Add(modsText);
@@ -1187,12 +1187,12 @@ exit";
                 BorderStyle = BorderStyle.None,
                 ReadOnly = true,
                 Text = "Settings Tab\n\n" +
-                       "• Check for updates: Automatically check for manager updates on startup\n\n" +
-                       "• Start with Windows: Launch the mod manager when your computer starts\n\n" +
-                       "• Dark Theme: Toggle between dark and light interface\n\n" +
-                       "• Auto-install updates: Automatically install updates when available\n\n" +
-                       "• Save: Apply and save your settings\n\n" +
-                       "• Reset: Restore default settings"
+                       "Â• Check for updates: Automatically check for manager updates on startup\n\n" +
+                       "Â• Start with Windows: Launch the mod manager when your computer starts\n\n" +
+                       "Â• Dark Theme: Toggle between dark and light interface\n\n" +
+                       "Â• Auto-install updates: Automatically install updates when available\n\n" +
+                       "Â• Save: Apply and save your settings\n\n" +
+                       "Â• Reset: Restore default settings"
             };
 
             settingsHelp.Controls.Add(settingsText);
@@ -1211,11 +1211,11 @@ exit";
                 BorderStyle = BorderStyle.None,
                 ReadOnly = true,
                 Text = "Troubleshooting\n\n" +
-                       "• Game not found: Use the Browse button to locate your Gorilla Tag installation\n\n" +
-                       "• Mods not working: Make sure BepInEx is installed correctly\n\n" +
-                       "• Game crashes: Try disabling mods one by one to find the problematic one\n\n" +
-                       "• Update issues: If automatic updates fail, download the latest version manually\n\n"
-                       //"• For more help, join our Discord server from the Credits tab"
+                       "Â• Game not found: Use the Browse button to locate your Gorilla Tag installation\n\n" +
+                       "Â• Mods not working: Make sure BepInEx is installed correctly\n\n" +
+                       "Â• Game crashes: Try disabling mods one by one to find the problematic one\n\n" +
+                       "Â• Update issues: If automatic updates fail, download the latest version manually\n\n"
+                       //"Â• For more help, join our Discord server from the Credits tab"
             };
 
             troubleHelp.Controls.Add(troubleText);
