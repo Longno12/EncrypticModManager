@@ -2,7 +2,6 @@
 {
     partial class MainForm
     {
-
         private System.ComponentModel.IContainer components = null;
 
         protected override void Dispose(bool disposing)
@@ -19,46 +18,49 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.dashboardTab = new System.Windows.Forms.TabPage();
-            this.dashboardMainPanel = new System.Windows.Forms.Panel();
-            this.launchPanel = new System.Windows.Forms.Panel();
             this.btnLaunchGame = new System.Windows.Forms.Button();
-            this.actionsPanel = new System.Windows.Forms.Panel();
+            this.actionsCard = new System.Windows.Forms.Panel();
             this.btnInstallMenu = new System.Windows.Forms.Button();
             this.btnInstallBepInEx = new System.Windows.Forms.Button();
-            this.gameInfoGroupBox = new System.Windows.Forms.GroupBox();
+            this.gameInfoCard = new System.Windows.Forms.Panel();
+            this.btnBrowseGame = new System.Windows.Forms.Button();
             this.lblGameVersion = new System.Windows.Forms.Label();
             this.lblGamePath = new System.Windows.Forms.Label();
             this.lblGameStatus = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBrowseGame = new System.Windows.Forms.Button();
             this.modsTab = new System.Windows.Forms.TabPage();
             this.modListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtSearchMods = new System.Windows.Forms.TextBox();
             this.modControlPanel = new System.Windows.Forms.Panel();
             this.btnRefreshMods = new System.Windows.Forms.Button();
             this.btnDisableMod = new System.Windows.Forms.Button();
             this.btnEnableMod = new System.Windows.Forms.Button();
             this.btnUninstallMod = new System.Windows.Forms.Button();
             this.btnInstallMod = new System.Windows.Forms.Button();
+            this.searchPanel = new System.Windows.Forms.Panel();
+            this.txtSearchMods = new System.Windows.Forms.TextBox();
+            this.searchIcon = new System.Windows.Forms.PictureBox();
             this.settingsTab = new System.Windows.Forms.TabPage();
-            this.settingsPanel = new System.Windows.Forms.Panel();
+            this.settingsCard = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.toggleAutoInstallUpdates = new ModManager.ToggleButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.toggleDarkTheme = new ModManager.ToggleButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.toggleStartWithWindows = new ModManager.ToggleButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.toggleAutoUpdate = new ModManager.ToggleButton();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnResetSettings = new System.Windows.Forms.Button();
             this.btnSaveSettings = new System.Windows.Forms.Button();
-            this.chkAutoInstallUpdates = new System.Windows.Forms.CheckBox();
-            this.chkDarkTheme = new System.Windows.Forms.CheckBox();
-            this.chkStartWithWindows = new System.Windows.Forms.CheckBox();
-            this.chkAutoUpdate = new System.Windows.Forms.CheckBox();
             this.creditsTab = new System.Windows.Forms.TabPage();
-            this.creditsPanel = new System.Windows.Forms.Panel();
+            this.creditsCard = new System.Windows.Forms.Panel();
             this.btnDiscord = new System.Windows.Forms.Button();
             this.lblCreditsText = new System.Windows.Forms.Label();
             this.lblCreditsTitle = new System.Windows.Forms.Label();
@@ -69,7 +71,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.progressBar = new System.Windows.Forms.ToolStripProgressBar();
-            this.versionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.headerPanel = new System.Windows.Forms.Panel();
             this.minimizeButton = new System.Windows.Forms.Button();
@@ -81,31 +82,25 @@
             this.modsButton = new System.Windows.Forms.Button();
             this.dashboardButton = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
-            this.logoIcon = new System.Windows.Forms.PictureBox();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.tabControl.SuspendLayout();
             this.dashboardTab.SuspendLayout();
-            this.dashboardMainPanel.SuspendLayout();
-            this.launchPanel.SuspendLayout();
-            this.actionsPanel.SuspendLayout();
-            this.gameInfoGroupBox.SuspendLayout();
+            this.actionsCard.SuspendLayout();
+            this.gameInfoCard.SuspendLayout();
             this.modsTab.SuspendLayout();
             this.modControlPanel.SuspendLayout();
+            this.searchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchIcon)).BeginInit();
             this.settingsTab.SuspendLayout();
-            this.settingsPanel.SuspendLayout();
+            this.settingsCard.SuspendLayout();
             this.creditsTab.SuspendLayout();
-            this.creditsPanel.SuspendLayout();
+            this.creditsCard.SuspendLayout();
             this.logPanel.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.sidebarPanel.SuspendLayout();
-            this.logoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoIcon)).BeginInit();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabControl
-            // 
             this.tabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl.Controls.Add(this.dashboardTab);
             this.tabControl.Controls.Add(this.modsTab);
@@ -117,648 +112,520 @@
             this.tabControl.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(800, 450);
+            this.tabControl.Size = new System.Drawing.Size(784, 421);
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabIndex = 0;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
-            // 
-            // dashboardTab
-            // 
-            this.dashboardTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.dashboardTab.Controls.Add(this.dashboardMainPanel);
+            this.dashboardTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.dashboardTab.Controls.Add(this.btnLaunchGame);
+            this.dashboardTab.Controls.Add(this.actionsCard);
+            this.dashboardTab.Controls.Add(this.gameInfoCard);
             this.dashboardTab.Location = new System.Drawing.Point(4, 5);
             this.dashboardTab.Name = "dashboardTab";
-            this.dashboardTab.Padding = new System.Windows.Forms.Padding(3);
-            this.dashboardTab.Size = new System.Drawing.Size(792, 441);
+            this.dashboardTab.Padding = new System.Windows.Forms.Padding(20);
+            this.dashboardTab.Size = new System.Drawing.Size(776, 412);
             this.dashboardTab.TabIndex = 0;
             this.dashboardTab.Text = "Dashboard";
-            // 
-            // dashboardMainPanel
-            // 
-            this.dashboardMainPanel.Controls.Add(this.launchPanel);
-            this.dashboardMainPanel.Controls.Add(this.actionsPanel);
-            this.dashboardMainPanel.Controls.Add(this.gameInfoGroupBox);
-            this.dashboardMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboardMainPanel.Location = new System.Drawing.Point(3, 3);
-            this.dashboardMainPanel.Name = "dashboardMainPanel";
-            this.dashboardMainPanel.Padding = new System.Windows.Forms.Padding(20);
-            this.dashboardMainPanel.Size = new System.Drawing.Size(786, 435);
-            this.dashboardMainPanel.TabIndex = 0;
-            // 
-            // launchPanel
-            // 
-            this.launchPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.launchPanel.Controls.Add(this.btnLaunchGame);
-            this.launchPanel.Location = new System.Drawing.Point(20, 350);
-            this.launchPanel.Name = "launchPanel";
-            this.launchPanel.Size = new System.Drawing.Size(746, 65);
-            this.launchPanel.TabIndex = 2;
-            // 
-            // btnLaunchGame
-            // 
-            this.btnLaunchGame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnLaunchGame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLaunchGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnLaunchGame.FlatAppearance.BorderSize = 0;
             this.btnLaunchGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLaunchGame.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLaunchGame.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnLaunchGame.ForeColor = System.Drawing.Color.White;
-            this.btnLaunchGame.Location = new System.Drawing.Point(0, 0);
+            this.btnLaunchGame.Location = new System.Drawing.Point(23, 342);
             this.btnLaunchGame.Name = "btnLaunchGame";
-            this.btnLaunchGame.Size = new System.Drawing.Size(746, 65);
-            this.btnLaunchGame.TabIndex = 0;
+            this.btnLaunchGame.Size = new System.Drawing.Size(730, 50);
+            this.btnLaunchGame.TabIndex = 2;
             this.btnLaunchGame.Text = "Launch Game";
             this.btnLaunchGame.UseVisualStyleBackColor = false;
             this.btnLaunchGame.Click += new System.EventHandler(this.btnLaunchGame_Click);
-            // 
-            // actionsPanel
-            // 
-            this.actionsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.actionsCard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.actionsPanel.Controls.Add(this.btnInstallMenu);
-            this.actionsPanel.Controls.Add(this.btnInstallBepInEx);
-            this.actionsPanel.Location = new System.Drawing.Point(20, 220);
-            this.actionsPanel.Name = "actionsPanel";
-            this.actionsPanel.Size = new System.Drawing.Size(746, 100);
-            this.actionsPanel.TabIndex = 1;
-            // 
-            // btnInstallMenu
-            // 
-            this.btnInstallMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInstallMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.actionsCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.actionsCard.Controls.Add(this.btnInstallMenu);
+            this.actionsCard.Controls.Add(this.btnInstallBepInEx);
+            this.actionsCard.Location = new System.Drawing.Point(23, 190);
+            this.actionsCard.Name = "actionsCard";
+            this.actionsCard.Size = new System.Drawing.Size(730, 100);
+            this.actionsCard.TabIndex = 1;
+            this.btnInstallMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInstallMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnInstallMenu.FlatAppearance.BorderSize = 0;
             this.btnInstallMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstallMenu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInstallMenu.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnInstallMenu.ForeColor = System.Drawing.Color.White;
-            this.btnInstallMenu.Location = new System.Drawing.Point(373, 0);
+            this.btnInstallMenu.Location = new System.Drawing.Point(375, 22);
             this.btnInstallMenu.Name = "btnInstallMenu";
-            this.btnInstallMenu.Size = new System.Drawing.Size(373, 100);
+            this.btnInstallMenu.Size = new System.Drawing.Size(335, 55);
             this.btnInstallMenu.TabIndex = 1;
             this.btnInstallMenu.Text = "Install Menu";
             this.btnInstallMenu.UseVisualStyleBackColor = false;
             this.btnInstallMenu.Click += new System.EventHandler(this.btnInstallMenu_Click);
-            // 
-            // btnInstallBepInEx
-            // 
-            this.btnInstallBepInEx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnInstallBepInEx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnInstallBepInEx.FlatAppearance.BorderSize = 0;
             this.btnInstallBepInEx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstallBepInEx.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInstallBepInEx.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnInstallBepInEx.ForeColor = System.Drawing.Color.White;
-            this.btnInstallBepInEx.Location = new System.Drawing.Point(0, 0);
+            this.btnInstallBepInEx.Location = new System.Drawing.Point(20, 22);
             this.btnInstallBepInEx.Name = "btnInstallBepInEx";
-            this.btnInstallBepInEx.Size = new System.Drawing.Size(373, 100);
+            this.btnInstallBepInEx.Size = new System.Drawing.Size(335, 55);
             this.btnInstallBepInEx.TabIndex = 0;
-            this.btnInstallBepInEx.Text = "Reinstall BepInEx";
+            this.btnInstallBepInEx.Text = "Install BepInEx";
             this.btnInstallBepInEx.UseVisualStyleBackColor = false;
             this.btnInstallBepInEx.Click += new System.EventHandler(this.btnInstallBepInEx_Click);
-            // 
-            // gameInfoGroupBox
-            // 
-            this.gameInfoGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gameInfoCard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gameInfoGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.gameInfoGroupBox.Controls.Add(this.lblGameVersion);
-            this.gameInfoGroupBox.Controls.Add(this.lblGamePath);
-            this.gameInfoGroupBox.Controls.Add(this.lblGameStatus);
-            this.gameInfoGroupBox.Controls.Add(this.label3);
-            this.gameInfoGroupBox.Controls.Add(this.label2);
-            this.gameInfoGroupBox.Controls.Add(this.label1);
-            this.gameInfoGroupBox.Controls.Add(this.btnBrowseGame);
-            this.gameInfoGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gameInfoGroupBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameInfoGroupBox.ForeColor = System.Drawing.Color.White;
-            this.gameInfoGroupBox.Location = new System.Drawing.Point(20, 20);
-            this.gameInfoGroupBox.Name = "gameInfoGroupBox";
-            this.gameInfoGroupBox.Size = new System.Drawing.Size(746, 170);
-            this.gameInfoGroupBox.TabIndex = 0;
-            this.gameInfoGroupBox.TabStop = false;
-            this.gameInfoGroupBox.Text = "Game Information";
-            // 
-            // lblGameVersion
-            // 
-            this.lblGameVersion.AutoSize = true;
-            this.lblGameVersion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGameVersion.ForeColor = System.Drawing.Color.White;
-            this.lblGameVersion.Location = new System.Drawing.Point(150, 120);
-            this.lblGameVersion.Name = "lblGameVersion";
-            this.lblGameVersion.Size = new System.Drawing.Size(65, 17);
-            this.lblGameVersion.TabIndex = 6;
-            this.lblGameVersion.Text = "Unknown";
-            // 
-            // lblGamePath
-            // 
-            this.lblGamePath.AutoSize = true;
-            this.lblGamePath.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGamePath.ForeColor = System.Drawing.Color.White;
-            this.lblGamePath.Location = new System.Drawing.Point(150, 80);
-            this.lblGamePath.Name = "lblGamePath";
-            this.lblGamePath.Size = new System.Drawing.Size(341, 17);
-            this.lblGamePath.TabIndex = 5;
-            this.lblGamePath.Text = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Gorilla Tag";
-            // 
-            // lblGameStatus
-            // 
-            this.lblGameStatus.AutoSize = true;
-            this.lblGameStatus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGameStatus.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblGameStatus.Location = new System.Drawing.Point(150, 40);
-            this.lblGameStatus.Name = "lblGameStatus";
-            this.lblGameStatus.Size = new System.Drawing.Size(58, 17);
-            this.lblGameStatus.TabIndex = 4;
-            this.lblGameStatus.Text = "Modded";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label3.Location = new System.Drawing.Point(20, 120);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Game Version:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label2.Location = new System.Drawing.Point(20, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Game Path:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label1.Location = new System.Drawing.Point(20, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Game Status:";
-            // 
-            // btnBrowseGame
-            // 
+            this.gameInfoCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.gameInfoCard.Controls.Add(this.btnBrowseGame);
+            this.gameInfoCard.Controls.Add(this.lblGameVersion);
+            this.gameInfoCard.Controls.Add(this.lblGamePath);
+            this.gameInfoCard.Controls.Add(this.lblGameStatus);
+            this.gameInfoCard.Controls.Add(this.label3);
+            this.gameInfoCard.Controls.Add(this.label2);
+            this.gameInfoCard.Controls.Add(this.label1);
+            this.gameInfoCard.Location = new System.Drawing.Point(23, 23);
+            this.gameInfoCard.Name = "gameInfoCard";
+            this.gameInfoCard.Size = new System.Drawing.Size(730, 150);
+            this.gameInfoCard.TabIndex = 0;
             this.btnBrowseGame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBrowseGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnBrowseGame.FlatAppearance.BorderSize = 0;
             this.btnBrowseGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowseGame.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowseGame.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBrowseGame.ForeColor = System.Drawing.Color.White;
-            this.btnBrowseGame.Location = new System.Drawing.Point(640, 75);
+            this.btnBrowseGame.Location = new System.Drawing.Point(620, 64);
             this.btnBrowseGame.Name = "btnBrowseGame";
-            this.btnBrowseGame.Size = new System.Drawing.Size(86, 28);
-            this.btnBrowseGame.TabIndex = 0;
+            this.btnBrowseGame.Size = new System.Drawing.Size(90, 28);
+            this.btnBrowseGame.TabIndex = 7;
             this.btnBrowseGame.Text = "Browse...";
             this.btnBrowseGame.UseVisualStyleBackColor = false;
             this.btnBrowseGame.Click += new System.EventHandler(this.btnBrowseGame_Click);
-            // 
-            // modsTab
-            // 
-            this.modsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.lblGameVersion.AutoSize = true;
+            this.lblGameVersion.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.lblGameVersion.Location = new System.Drawing.Point(135, 107);
+            this.lblGameVersion.Name = "lblGameVersion";
+            this.lblGameVersion.Size = new System.Drawing.Size(62, 17);
+            this.lblGameVersion.TabIndex = 6;
+            this.lblGameVersion.Text = "Unknown";
+            this.lblGamePath.AutoEllipsis = true;
+            this.lblGamePath.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.lblGamePath.Location = new System.Drawing.Point(135, 69);
+            this.lblGamePath.Name = "lblGamePath";
+            this.lblGamePath.Size = new System.Drawing.Size(479, 17);
+            this.lblGamePath.TabIndex = 5;
+            this.lblGamePath.Text = "C:\\...\\Gorilla Tag";
+            this.lblGameStatus.AutoSize = true;
+            this.lblGameStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblGameStatus.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lblGameStatus.Location = new System.Drawing.Point(135, 31);
+            this.lblGameStatus.Name = "lblGameStatus";
+            this.lblGameStatus.Size = new System.Drawing.Size(60, 17);
+            this.lblGameStatus.TabIndex = 4;
+            this.lblGameStatus.Text = "Modded";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.label3.Location = new System.Drawing.Point(20, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 17);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Game Version:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.label2.Location = new System.Drawing.Point(20, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Game Path:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.label1.Location = new System.Drawing.Point(20, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Game Status:";
+            this.modsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.modsTab.Controls.Add(this.modListView);
-            this.modsTab.Controls.Add(this.txtSearchMods);
             this.modsTab.Controls.Add(this.modControlPanel);
+            this.modsTab.Controls.Add(this.searchPanel);
             this.modsTab.Location = new System.Drawing.Point(4, 5);
             this.modsTab.Name = "modsTab";
-            this.modsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.modsTab.Size = new System.Drawing.Size(792, 441);
+            this.modsTab.Padding = new System.Windows.Forms.Padding(20);
+            this.modsTab.Size = new System.Drawing.Size(776, 412);
             this.modsTab.TabIndex = 1;
             this.modsTab.Text = "Mods";
-            // 
-            // modListView
-            // 
-            this.modListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.modListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.modListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.modListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.modListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.modListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.modListView.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modListView.ForeColor = System.Drawing.Color.White;
+            this.modListView.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.modListView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.modListView.FullRowSelect = true;
+            this.modListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.modListView.HideSelection = false;
-            this.modListView.Location = new System.Drawing.Point(20, 60);
+            this.modListView.Location = new System.Drawing.Point(23, 67);
             this.modListView.Name = "modListView";
-            this.modListView.Size = new System.Drawing.Size(752, 315);
+            this.modListView.Size = new System.Drawing.Size(730, 281);
             this.modListView.TabIndex = 2;
             this.modListView.UseCompatibleStateImageBehavior = false;
             this.modListView.View = System.Windows.Forms.View.Details;
-            this.modListView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.modListView_ColumnClick);
-            // 
-            // columnHeader1
-            // 
             this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 300;
-            // 
-            // columnHeader2
-            // 
+            this.columnHeader1.Width = 450;
             this.columnHeader2.Text = "Version";
-            this.columnHeader2.Width = 100;
-            // 
-            // columnHeader3
-            // 
+            this.columnHeader2.Width = 120;
             this.columnHeader3.Text = "Status";
-            this.columnHeader3.Width = 100;
-            // 
-            // txtSearchMods
-            // 
-            this.txtSearchMods.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.columnHeader3.Width = 120;
+            this.modControlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchMods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.txtSearchMods.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchMods.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchMods.ForeColor = System.Drawing.Color.Gray;
-            this.txtSearchMods.Location = new System.Drawing.Point(20, 20);
-            this.txtSearchMods.Name = "txtSearchMods";
-            this.txtSearchMods.Size = new System.Drawing.Size(752, 25);
-            this.txtSearchMods.TabIndex = 1;
-            this.txtSearchMods.Text = "Search mods...";
-            //this.txtSearchMods.TextChanged += new System.EventHandler(this.txtSearchMods_TextChanged);
-            // 
-            // modControlPanel
-            // 
-            this.modControlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.modControlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.modControlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.modControlPanel.Controls.Add(this.btnRefreshMods);
             this.modControlPanel.Controls.Add(this.btnDisableMod);
             this.modControlPanel.Controls.Add(this.btnEnableMod);
             this.modControlPanel.Controls.Add(this.btnUninstallMod);
             this.modControlPanel.Controls.Add(this.btnInstallMod);
-            this.modControlPanel.Location = new System.Drawing.Point(20, 385);
+            this.modControlPanel.Location = new System.Drawing.Point(23, 354);
             this.modControlPanel.Name = "modControlPanel";
-            this.modControlPanel.Size = new System.Drawing.Size(752, 40);
+            this.modControlPanel.Size = new System.Drawing.Size(730, 40);
             this.modControlPanel.TabIndex = 0;
-            // 
-            // btnRefreshMods
-            // 
             this.btnRefreshMods.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefreshMods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnRefreshMods.FlatAppearance.BorderSize = 0;
             this.btnRefreshMods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefreshMods.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefreshMods.ForeColor = System.Drawing.Color.White;
-            this.btnRefreshMods.Location = new System.Drawing.Point(652, 5);
+            this.btnRefreshMods.Location = new System.Drawing.Point(625, 5);
             this.btnRefreshMods.Name = "btnRefreshMods";
-            this.btnRefreshMods.Size = new System.Drawing.Size(95, 30);
+            this.btnRefreshMods.Size = new System.Drawing.Size(100, 30);
             this.btnRefreshMods.TabIndex = 4;
             this.btnRefreshMods.Text = "Refresh";
             this.btnRefreshMods.UseVisualStyleBackColor = false;
             this.btnRefreshMods.Click += new System.EventHandler(this.btnRefreshMods_Click);
-            // 
-            // btnDisableMod
-            // 
             this.btnDisableMod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnDisableMod.FlatAppearance.BorderSize = 0;
             this.btnDisableMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisableMod.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisableMod.ForeColor = System.Drawing.Color.White;
-            this.btnDisableMod.Location = new System.Drawing.Point(305, 5);
+            this.btnDisableMod.Location = new System.Drawing.Point(320, 5);
             this.btnDisableMod.Name = "btnDisableMod";
-            this.btnDisableMod.Size = new System.Drawing.Size(95, 30);
+            this.btnDisableMod.Size = new System.Drawing.Size(100, 30);
             this.btnDisableMod.TabIndex = 3;
             this.btnDisableMod.Text = "Disable";
             this.btnDisableMod.UseVisualStyleBackColor = false;
-            this.btnDisableMod.Click += new System.EventHandler(this.btnDisableMod_Click);
-            // 
-            // btnEnableMod
-            // 
             this.btnEnableMod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnEnableMod.FlatAppearance.BorderSize = 0;
             this.btnEnableMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnableMod.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnableMod.ForeColor = System.Drawing.Color.White;
-            this.btnEnableMod.Location = new System.Drawing.Point(205, 5);
+            this.btnEnableMod.Location = new System.Drawing.Point(215, 5);
             this.btnEnableMod.Name = "btnEnableMod";
-            this.btnEnableMod.Size = new System.Drawing.Size(95, 30);
+            this.btnEnableMod.Size = new System.Drawing.Size(100, 30);
             this.btnEnableMod.TabIndex = 2;
             this.btnEnableMod.Text = "Enable";
             this.btnEnableMod.UseVisualStyleBackColor = false;
-            this.btnEnableMod.Click += new System.EventHandler(this.btnEnableMod_Click);
-            // 
-            // btnUninstallMod
-            // 
-            this.btnUninstallMod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnUninstallMod.BackColor = System.Drawing.Color.IndianRed;
             this.btnUninstallMod.FlatAppearance.BorderSize = 0;
             this.btnUninstallMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUninstallMod.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUninstallMod.ForeColor = System.Drawing.Color.White;
-            this.btnUninstallMod.Location = new System.Drawing.Point(105, 5);
+            this.btnUninstallMod.Location = new System.Drawing.Point(110, 5);
             this.btnUninstallMod.Name = "btnUninstallMod";
-            this.btnUninstallMod.Size = new System.Drawing.Size(95, 30);
+            this.btnUninstallMod.Size = new System.Drawing.Size(100, 30);
             this.btnUninstallMod.TabIndex = 1;
             this.btnUninstallMod.Text = "Uninstall";
             this.btnUninstallMod.UseVisualStyleBackColor = false;
-            this.btnUninstallMod.Click += new System.EventHandler(this.btnUninstallMod_Click);
-            // 
-            // btnInstallMod
-            // 
             this.btnInstallMod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnInstallMod.FlatAppearance.BorderSize = 0;
             this.btnInstallMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstallMod.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInstallMod.ForeColor = System.Drawing.Color.White;
             this.btnInstallMod.Location = new System.Drawing.Point(5, 5);
             this.btnInstallMod.Name = "btnInstallMod";
-            this.btnInstallMod.Size = new System.Drawing.Size(95, 30);
+            this.btnInstallMod.Size = new System.Drawing.Size(100, 30);
             this.btnInstallMod.TabIndex = 0;
-            this.btnInstallMod.Text = "Install";
+            this.btnInstallMod.Text = "Install Mod";
             this.btnInstallMod.UseVisualStyleBackColor = false;
-            this.btnInstallMod.Click += new System.EventHandler(this.btnInstallMod_Click);
-            // 
-            // settingsTab
-            // 
-            this.settingsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.settingsTab.Controls.Add(this.settingsPanel);
+            this.searchPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.searchPanel.Controls.Add(this.txtSearchMods);
+            this.searchPanel.Controls.Add(this.searchIcon);
+            this.searchPanel.Location = new System.Drawing.Point(23, 23);
+            this.searchPanel.Name = "searchPanel";
+            this.searchPanel.Padding = new System.Windows.Forms.Padding(8, 0, 4, 0);
+            this.searchPanel.Size = new System.Drawing.Size(730, 32);
+            this.searchPanel.TabIndex = 3;
+            this.txtSearchMods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txtSearchMods.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearchMods.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSearchMods.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtSearchMods.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.txtSearchMods.Location = new System.Drawing.Point(8, 7);
+            this.txtSearchMods.Name = "txtSearchMods";
+            this.txtSearchMods.Size = new System.Drawing.Size(688, 18);
+            this.txtSearchMods.TabIndex = 1;
+            this.txtSearchMods.TextChanged += new System.EventHandler(this.txtSearchMods_TextChanged);
+            this.searchIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.searchIcon.Location = new System.Drawing.Point(696, 0);
+            this.searchIcon.Name = "searchIcon";
+            this.searchIcon.Size = new System.Drawing.Size(30, 32);
+            this.searchIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.searchIcon.TabIndex = 2;
+            this.searchIcon.TabStop = false;
+            this.settingsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.settingsTab.Controls.Add(this.settingsCard);
             this.settingsTab.Location = new System.Drawing.Point(4, 5);
             this.settingsTab.Name = "settingsTab";
-            this.settingsTab.Size = new System.Drawing.Size(792, 441);
+            this.settingsTab.Padding = new System.Windows.Forms.Padding(20);
+            this.settingsTab.Size = new System.Drawing.Size(776, 412);
             this.settingsTab.TabIndex = 2;
             this.settingsTab.Text = "Settings";
-            // 
-            // settingsPanel
-            // 
-            this.settingsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.settingsCard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.settingsPanel.Controls.Add(this.btnHelp);
-            this.settingsPanel.Controls.Add(this.btnResetSettings);
-            this.settingsPanel.Controls.Add(this.btnSaveSettings);
-            this.settingsPanel.Controls.Add(this.chkAutoInstallUpdates);
-            this.settingsPanel.Controls.Add(this.chkDarkTheme);
-            this.settingsPanel.Controls.Add(this.chkStartWithWindows);
-            this.settingsPanel.Controls.Add(this.chkAutoUpdate);
-            this.settingsPanel.Location = new System.Drawing.Point(20, 20);
-            this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(752, 405);
-            this.settingsPanel.TabIndex = 0;
-            // 
-            // btnHelp
-            // 
+            this.settingsCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.settingsCard.Controls.Add(this.label7);
+            this.settingsCard.Controls.Add(this.toggleAutoInstallUpdates);
+            this.settingsCard.Controls.Add(this.label6);
+            this.settingsCard.Controls.Add(this.toggleDarkTheme);
+            this.settingsCard.Controls.Add(this.label5);
+            this.settingsCard.Controls.Add(this.toggleStartWithWindows);
+            this.settingsCard.Controls.Add(this.label4);
+            this.settingsCard.Controls.Add(this.toggleAutoUpdate);
+            this.settingsCard.Controls.Add(this.btnHelp);
+            this.settingsCard.Controls.Add(this.btnResetSettings);
+            this.settingsCard.Controls.Add(this.btnSaveSettings);
+            this.settingsCard.Location = new System.Drawing.Point(23, 23);
+            this.settingsCard.Name = "settingsCard";
+            this.settingsCard.Size = new System.Drawing.Size(730, 366);
+            this.settingsCard.TabIndex = 0;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.label7.Location = new System.Drawing.Point(85, 146);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(221, 17);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Automatically install manager updates";
+            this.toggleAutoInstallUpdates.Appearance = System.Windows.Forms.Appearance.Button;
+            this.toggleAutoInstallUpdates.FlatAppearance.BorderSize = 0;
+            this.toggleAutoInstallUpdates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toggleAutoInstallUpdates.Location = new System.Drawing.Point(25, 144);
+            this.toggleAutoInstallUpdates.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleAutoInstallUpdates.Name = "toggleAutoInstallUpdates";
+            this.toggleAutoInstallUpdates.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.toggleAutoInstallUpdates.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.toggleAutoInstallUpdates.Size = new System.Drawing.Size(45, 22);
+            this.toggleAutoInstallUpdates.SliderColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleAutoInstallUpdates.TabIndex = 13;
+            this.toggleAutoInstallUpdates.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.label6.Location = new System.Drawing.Point(85, 107);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(126, 17);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Enable Dark Theme";
+            this.toggleDarkTheme.Appearance = System.Windows.Forms.Appearance.Button;
+            this.toggleDarkTheme.Checked = true;
+            this.toggleDarkTheme.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toggleDarkTheme.FlatAppearance.BorderSize = 0;
+            this.toggleDarkTheme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toggleDarkTheme.Location = new System.Drawing.Point(25, 105);
+            this.toggleDarkTheme.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleDarkTheme.Name = "toggleDarkTheme";
+            this.toggleDarkTheme.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.toggleDarkTheme.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.toggleDarkTheme.Size = new System.Drawing.Size(45, 22);
+            this.toggleDarkTheme.SliderColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleDarkTheme.TabIndex = 11;
+            this.toggleDarkTheme.UseVisualStyleBackColor = true;
+            this.toggleDarkTheme.CheckedChanged += new System.EventHandler(this.toggleDarkTheme_CheckedChanged);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.label5.Location = new System.Drawing.Point(85, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Start with Windows";
+            this.toggleStartWithWindows.Appearance = System.Windows.Forms.Appearance.Button;
+            this.toggleStartWithWindows.FlatAppearance.BorderSize = 0;
+            this.toggleStartWithWindows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toggleStartWithWindows.Location = new System.Drawing.Point(25, 66);
+            this.toggleStartWithWindows.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleStartWithWindows.Name = "toggleStartWithWindows";
+            this.toggleStartWithWindows.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.toggleStartWithWindows.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.toggleStartWithWindows.Size = new System.Drawing.Size(45, 22);
+            this.toggleStartWithWindows.SliderColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleStartWithWindows.TabIndex = 9;
+            this.toggleStartWithWindows.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.label4.Location = new System.Drawing.Point(85, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(176, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Check for updates on startup";
+            this.toggleAutoUpdate.Appearance = System.Windows.Forms.Appearance.Button;
+            this.toggleAutoUpdate.Checked = true;
+            this.toggleAutoUpdate.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toggleAutoUpdate.FlatAppearance.BorderSize = 0;
+            this.toggleAutoUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toggleAutoUpdate.Location = new System.Drawing.Point(25, 27);
+            this.toggleAutoUpdate.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleAutoUpdate.Name = "toggleAutoUpdate";
+            this.toggleAutoUpdate.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.toggleAutoUpdate.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.toggleAutoUpdate.Size = new System.Drawing.Size(45, 22);
+            this.toggleAutoUpdate.SliderColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleAutoUpdate.TabIndex = 7;
+            this.toggleAutoUpdate.UseVisualStyleBackColor = true;
             this.btnHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelp.ForeColor = System.Drawing.Color.White;
-            this.btnHelp.Location = new System.Drawing.Point(652, 365);
+            this.btnHelp.Location = new System.Drawing.Point(625, 316);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(95, 30);
+            this.btnHelp.Size = new System.Drawing.Size(85, 30);
             this.btnHelp.TabIndex = 6;
             this.btnHelp.Text = "Help";
             this.btnHelp.UseVisualStyleBackColor = false;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
-            // 
-            // btnResetSettings
-            // 
             this.btnResetSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnResetSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnResetSettings.BackColor = System.Drawing.Color.IndianRed;
             this.btnResetSettings.FlatAppearance.BorderSize = 0;
             this.btnResetSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetSettings.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetSettings.ForeColor = System.Drawing.Color.White;
-            this.btnResetSettings.Location = new System.Drawing.Point(105, 365);
+            this.btnResetSettings.Location = new System.Drawing.Point(125, 316);
             this.btnResetSettings.Name = "btnResetSettings";
-            this.btnResetSettings.Size = new System.Drawing.Size(95, 30);
+            this.btnResetSettings.Size = new System.Drawing.Size(85, 30);
             this.btnResetSettings.TabIndex = 5;
             this.btnResetSettings.Text = "Reset";
             this.btnResetSettings.UseVisualStyleBackColor = false;
             this.btnResetSettings.Click += new System.EventHandler(this.btnResetSettings_Click);
-            // 
-            // btnSaveSettings
-            // 
             this.btnSaveSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSaveSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnSaveSettings.FlatAppearance.BorderSize = 0;
             this.btnSaveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveSettings.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSaveSettings.Location = new System.Drawing.Point(5, 365);
+            this.btnSaveSettings.Location = new System.Drawing.Point(25, 316);
             this.btnSaveSettings.Name = "btnSaveSettings";
-            this.btnSaveSettings.Size = new System.Drawing.Size(95, 30);
+            this.btnSaveSettings.Size = new System.Drawing.Size(85, 30);
             this.btnSaveSettings.TabIndex = 4;
             this.btnSaveSettings.Text = "Save";
             this.btnSaveSettings.UseVisualStyleBackColor = false;
             this.btnSaveSettings.Click += new System.EventHandler(this.btnSaveSettings_Click);
-            // 
-            // chkAutoInstallUpdates
-            // 
-            this.chkAutoInstallUpdates.AutoSize = true;
-            this.chkAutoInstallUpdates.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkAutoInstallUpdates.ForeColor = System.Drawing.Color.White;
-            this.chkAutoInstallUpdates.Location = new System.Drawing.Point(20, 110);
-            this.chkAutoInstallUpdates.Name = "chkAutoInstallUpdates";
-            this.chkAutoInstallUpdates.Size = new System.Drawing.Size(175, 21);
-            this.chkAutoInstallUpdates.TabIndex = 3;
-            this.chkAutoInstallUpdates.Text = "Auto-install updates when available";
-            this.chkAutoInstallUpdates.UseVisualStyleBackColor = true;
-            // 
-            // chkDarkTheme
-            // 
-            this.chkDarkTheme.AutoSize = true;
-            this.chkDarkTheme.Checked = true;
-            this.chkDarkTheme.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDarkTheme.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDarkTheme.ForeColor = System.Drawing.Color.White;
-            this.chkDarkTheme.Location = new System.Drawing.Point(20, 80);
-            this.chkDarkTheme.Name = "chkDarkTheme";
-            this.chkDarkTheme.Size = new System.Drawing.Size(96, 21);
-            this.chkDarkTheme.TabIndex = 2;
-            this.chkDarkTheme.Text = "Dark Theme";
-            this.chkDarkTheme.UseVisualStyleBackColor = true;
-            this.chkDarkTheme.CheckedChanged += new System.EventHandler(this.chkDarkTheme_CheckedChanged);
-            // 
-            // chkStartWithWindows
-            // 
-            this.chkStartWithWindows.AutoSize = true;
-            this.chkStartWithWindows.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkStartWithWindows.ForeColor = System.Drawing.Color.White;
-            this.chkStartWithWindows.Location = new System.Drawing.Point(20, 50);
-            this.chkStartWithWindows.Name = "chkStartWithWindows";
-            this.chkStartWithWindows.Size = new System.Drawing.Size(136, 21);
-            this.chkStartWithWindows.TabIndex = 1;
-            this.chkStartWithWindows.Text = "Start with Windows";
-            this.chkStartWithWindows.UseVisualStyleBackColor = true;
-            // 
-            // chkAutoUpdate
-            // 
-            this.chkAutoUpdate.AutoSize = true;
-            this.chkAutoUpdate.Checked = true;
-            this.chkAutoUpdate.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAutoUpdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkAutoUpdate.ForeColor = System.Drawing.Color.White;
-            this.chkAutoUpdate.Location = new System.Drawing.Point(20, 20);
-            this.chkAutoUpdate.Name = "chkAutoUpdate";
-            this.chkAutoUpdate.Size = new System.Drawing.Size(175, 21);
-            this.chkAutoUpdate.TabIndex = 0;
-            this.chkAutoUpdate.Text = "Check for updates on startup";
-            this.chkAutoUpdate.UseVisualStyleBackColor = true;
-            // 
-            // creditsTab
-            // 
-            this.creditsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.creditsTab.Controls.Add(this.creditsPanel);
+            this.creditsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.creditsTab.Controls.Add(this.creditsCard);
             this.creditsTab.Location = new System.Drawing.Point(4, 5);
             this.creditsTab.Name = "creditsTab";
-            this.creditsTab.Size = new System.Drawing.Size(792, 441);
+            this.creditsTab.Padding = new System.Windows.Forms.Padding(20);
+            this.creditsTab.Size = new System.Drawing.Size(776, 412);
             this.creditsTab.TabIndex = 3;
             this.creditsTab.Text = "Credits";
-            // 
-            // creditsPanel
-            // 
-            this.creditsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.creditsCard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.creditsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.creditsPanel.Controls.Add(this.btnDiscord);
-            this.creditsPanel.Controls.Add(this.lblCreditsText);
-            this.creditsPanel.Controls.Add(this.lblCreditsTitle);
-            this.creditsPanel.Location = new System.Drawing.Point(20, 20);
-            this.creditsPanel.Name = "creditsPanel";
-            this.creditsPanel.Size = new System.Drawing.Size(752, 405);
-            this.creditsPanel.TabIndex = 0;
-            // 
-            // btnDiscord
-            // 
+            this.creditsCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.creditsCard.Controls.Add(this.btnDiscord);
+            this.creditsCard.Controls.Add(this.lblCreditsText);
+            this.creditsCard.Controls.Add(this.lblCreditsTitle);
+            this.creditsCard.Location = new System.Drawing.Point(23, 23);
+            this.creditsCard.Name = "creditsCard";
+            this.creditsCard.Size = new System.Drawing.Size(730, 366);
+            this.creditsCard.TabIndex = 0;
             this.btnDiscord.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDiscord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
             this.btnDiscord.FlatAppearance.BorderSize = 0;
             this.btnDiscord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiscord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnDiscord.ForeColor = System.Drawing.Color.White;
-            this.btnDiscord.Location = new System.Drawing.Point(276, 250);
+            this.btnDiscord.Location = new System.Drawing.Point(265, 230);
             this.btnDiscord.Name = "btnDiscord";
             this.btnDiscord.Size = new System.Drawing.Size(200, 40);
             this.btnDiscord.TabIndex = 2;
             this.btnDiscord.Text = "Join Discord";
             this.btnDiscord.UseVisualStyleBackColor = false;
             this.btnDiscord.Click += new System.EventHandler(this.btnDiscord_Click);
-            // 
-            // lblCreditsText
-            // 
             this.lblCreditsText.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCreditsText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreditsText.ForeColor = System.Drawing.Color.White;
-            this.lblCreditsText.Location = new System.Drawing.Point(176, 120);
+            this.lblCreditsText.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lblCreditsText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.lblCreditsText.Location = new System.Drawing.Point(165, 137);
             this.lblCreditsText.Name = "lblCreditsText";
-            this.lblCreditsText.Size = new System.Drawing.Size(400, 100);
+            this.lblCreditsText.Size = new System.Drawing.Size(400, 70);
             this.lblCreditsText.TabIndex = 1;
-            this.lblCreditsText.Text = "CREDITS\r\n\r\nSpecial thanks to iidk " + "for the Bepinex cfg Join his Discord below.";
+            this.lblCreditsText.Text = "Special thanks to iidk for the Bepinex config.\r\nJoin his Discord below.";
             this.lblCreditsText.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblCreditsTitle
-            // 
             this.lblCreditsTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCreditsTitle.AutoSize = true;
-            this.lblCreditsTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreditsTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.lblCreditsTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lblCreditsTitle.Location = new System.Drawing.Point(271, 80);
+            this.lblCreditsTitle.Location = new System.Drawing.Point(324, 91);
             this.lblCreditsTitle.Name = "lblCreditsTitle";
-            this.lblCreditsTitle.Size = new System.Drawing.Size(210, 30);
+            this.lblCreditsTitle.Size = new System.Drawing.Size(101, 30);
             this.lblCreditsTitle.TabIndex = 0;
             this.lblCreditsTitle.Text = "Encryptic";
-            // 
-            // logPanel
-            // 
-            this.logPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.logPanel.Controls.Add(this.logTextBox);
             this.logPanel.Controls.Add(this.logLabel);
             this.logPanel.Controls.Add(this.btnClearLog);
             this.logPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.logPanel.Location = new System.Drawing.Point(200, 450);
+            this.logPanel.Location = new System.Drawing.Point(200, 461);
             this.logPanel.Name = "logPanel";
-            this.logPanel.Size = new System.Drawing.Size(800, 150);
+            this.logPanel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            this.logPanel.Size = new System.Drawing.Size(784, 140);
             this.logPanel.TabIndex = 1;
-            // 
-            // logTextBox
-            // 
-            this.logTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.logTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.logTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.logTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.logTextBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logTextBox.ForeColor = System.Drawing.Color.White;
-            this.logTextBox.Location = new System.Drawing.Point(20, 30);
+            this.logTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logTextBox.Font = new System.Drawing.Font("Consolas", 9F);
+            this.logTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.logTextBox.Location = new System.Drawing.Point(10, 27);
             this.logTextBox.Name = "logTextBox";
             this.logTextBox.ReadOnly = true;
-            this.logTextBox.Size = new System.Drawing.Size(760, 100);
+            this.logTextBox.Size = new System.Drawing.Size(764, 103);
             this.logTextBox.TabIndex = 2;
             this.logTextBox.Text = "";
-            // 
-            // logLabel
-            // 
             this.logLabel.AutoSize = true;
-            this.logLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.logLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.logLabel.Location = new System.Drawing.Point(20, 10);
+            this.logLabel.Location = new System.Drawing.Point(10, 0);
             this.logLabel.Name = "logLabel";
-            this.logLabel.Size = new System.Drawing.Size(32, 17);
+            this.logLabel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.logLabel.Size = new System.Drawing.Size(32, 27);
             this.logLabel.TabIndex = 1;
             this.logLabel.Text = "Log";
-            // 
-            // btnClearLog
-            // 
             this.btnClearLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClearLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnClearLog.FlatAppearance.BorderSize = 0;
             this.btnClearLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearLog.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearLog.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btnClearLog.ForeColor = System.Drawing.Color.White;
-            this.btnClearLog.Location = new System.Drawing.Point(720, 5);
+            this.btnClearLog.Location = new System.Drawing.Point(704, 3);
             this.btnClearLog.Name = "btnClearLog";
             this.btnClearLog.Size = new System.Drawing.Size(60, 22);
             this.btnClearLog.TabIndex = 0;
             this.btnClearLog.Text = "Clear";
             this.btnClearLog.UseVisualStyleBackColor = false;
             this.btnClearLog.Click += new System.EventHandler(this.btnClearLog_Click);
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.statusStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel,
-            this.progressBar,
-            this.versionLabel});
-            this.statusStrip.Location = new System.Drawing.Point(200, 600);
+            this.progressBar});
+            this.statusStrip.Location = new System.Drawing.Point(200, 601);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip.Size = new System.Drawing.Size(784, 22);
+            this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "statusStrip1";
-            // 
-            // statusLabel
-            // 
             this.statusLabel.ForeColor = System.Drawing.Color.White;
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(42, 17);
-            this.statusLabel.Text = "Ready.";
-            // 
-            // progressBar
-            // 
+            this.statusLabel.Size = new System.Drawing.Size(39, 17);
+            this.statusLabel.Text = "Ready";
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(100, 16);
-            this.progressBar.Visible = false;
-            // 
-            // versionLabel
-            // 
-            this.versionLabel.ForeColor = System.Drawing.Color.White;
-            this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(40, 17);
-            this.versionLabel.Text = "v1.0.0";
-            // 
-            // headerPanel
-            // 
+            this.progressBar.Visible = false; 
             this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.headerPanel.Controls.Add(this.minimizeButton);
             this.headerPanel.Controls.Add(this.closeButton);
@@ -766,53 +633,40 @@
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(1000, 40);
+            this.headerPanel.Size = new System.Drawing.Size(984, 40);
             this.headerPanel.TabIndex = 3;
-            // 
-            // minimizeButton
-            // 
-            this.minimizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.minimizeButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.minimizeButton.FlatAppearance.BorderSize = 0;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizeButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.minimizeButton.ForeColor = System.Drawing.Color.White;
-            this.minimizeButton.Location = new System.Drawing.Point(920, 0);
+            this.minimizeButton.Location = new System.Drawing.Point(894, 0);
             this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(40, 40);
+            this.minimizeButton.Size = new System.Drawing.Size(45, 40);
             this.minimizeButton.TabIndex = 2;
-            this.minimizeButton.Text = "−";
-            this.minimizeButton.UseVisualStyleBackColor = false;
-            // 
-            // closeButton
-            // 
-            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.minimizeButton.Text = "—";
+            this.minimizeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.closeButton.ForeColor = System.Drawing.Color.White;
-            this.closeButton.Location = new System.Drawing.Point(960, 0);
+            this.closeButton.Location = new System.Drawing.Point(939, 0);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(40, 40);
+            this.closeButton.Size = new System.Drawing.Size(45, 40);
             this.closeButton.TabIndex = 1;
-            this.closeButton.Text = "×";
-            this.closeButton.UseVisualStyleBackColor = false;
-            // 
-            // logoLabel
-            // 
+            this.closeButton.Text = "✕";
+            this.closeButton.UseVisualStyleBackColor = true;
             this.logoLabel.AutoSize = true;
-            this.logoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.logoLabel.ForeColor = System.Drawing.Color.White;
             this.logoLabel.Location = new System.Drawing.Point(12, 9);
             this.logoLabel.Name = "logoLabel";
             this.logoLabel.Size = new System.Drawing.Size(188, 21);
             this.logoLabel.TabIndex = 0;
             this.logoLabel.Text = "Encryptic Mod Manager";
-            // 
-            // sidebarPanel
-            // 
-            this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.sidebarPanel.Controls.Add(this.creditsButton);
             this.sidebarPanel.Controls.Add(this.settingsButton);
             this.sidebarPanel.Controls.Add(this.modsButton);
@@ -821,112 +675,97 @@
             this.sidebarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebarPanel.Location = new System.Drawing.Point(0, 40);
             this.sidebarPanel.Name = "sidebarPanel";
-            this.sidebarPanel.Size = new System.Drawing.Size(200, 582);
+            this.sidebarPanel.Size = new System.Drawing.Size(200, 583);
             this.sidebarPanel.TabIndex = 4;
-            // 
-            // creditsButton
-            // 
             this.creditsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.creditsButton.FlatAppearance.BorderSize = 0;
             this.creditsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.creditsButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creditsButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.creditsButton.ForeColor = System.Drawing.Color.White;
-            this.creditsButton.Location = new System.Drawing.Point(0, 250);
+            this.creditsButton.Location = new System.Drawing.Point(0, 220);
             this.creditsButton.Name = "creditsButton";
-            this.creditsButton.Size = new System.Drawing.Size(200, 50);
+            this.creditsButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.creditsButton.Size = new System.Drawing.Size(200, 60);
             this.creditsButton.TabIndex = 4;
-            this.creditsButton.Text = "Credits";
+            this.creditsButton.Tag = 3;
+            this.creditsButton.Text = "   Credits";
             this.creditsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.creditsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.creditsButton.UseVisualStyleBackColor = true;
-            this.creditsButton.Click += new System.EventHandler(this.creditsButton_Click);
-            // 
-            // settingsButton
-            // 
+            this.creditsButton.Click += new System.EventHandler(this.SidebarButton_Click);
+            this.creditsButton.Paint += new System.Windows.Forms.PaintEventHandler(this.SidebarButton_Paint);
             this.settingsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.settingsButton.ForeColor = System.Drawing.Color.White;
-            this.settingsButton.Location = new System.Drawing.Point(0, 200);
+            this.settingsButton.Location = new System.Drawing.Point(0, 160);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(200, 50);
+            this.settingsButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.settingsButton.Size = new System.Drawing.Size(200, 60);
             this.settingsButton.TabIndex = 3;
-            this.settingsButton.Text = "Settings";
+            this.settingsButton.Tag = 2;
+            this.settingsButton.Text = "   Settings";
             this.settingsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.settingsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.settingsButton.UseVisualStyleBackColor = true;
-            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
-            // 
-            // modsButton
-            // 
+            this.settingsButton.Click += new System.EventHandler(this.SidebarButton_Click);
+            this.settingsButton.Paint += new System.Windows.Forms.PaintEventHandler(this.SidebarButton_Paint); 
             this.modsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.modsButton.FlatAppearance.BorderSize = 0;
             this.modsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modsButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modsButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.modsButton.ForeColor = System.Drawing.Color.White;
-            this.modsButton.Location = new System.Drawing.Point(0, 150);
+            this.modsButton.Location = new System.Drawing.Point(0, 100);
             this.modsButton.Name = "modsButton";
-            this.modsButton.Size = new System.Drawing.Size(200, 50);
+            this.modsButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.modsButton.Size = new System.Drawing.Size(200, 60);
             this.modsButton.TabIndex = 2;
-            this.modsButton.Text = "Mods";
+            this.modsButton.Tag = 1;
+            this.modsButton.Text = "   Mods";
             this.modsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.modsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.modsButton.UseVisualStyleBackColor = true;
-            this.modsButton.Click += new System.EventHandler(this.modsButton_Click);
-            // 
-            // dashboardButton
-            // 
+            this.modsButton.Click += new System.EventHandler(this.SidebarButton_Click);
+            this.modsButton.Paint += new System.Windows.Forms.PaintEventHandler(this.SidebarButton_Paint);
             this.dashboardButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.dashboardButton.FlatAppearance.BorderSize = 0;
             this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboardButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.dashboardButton.ForeColor = System.Drawing.Color.White;
-            this.dashboardButton.Location = new System.Drawing.Point(0, 100);
+            this.dashboardButton.Location = new System.Drawing.Point(0, 40);
             this.dashboardButton.Name = "dashboardButton";
-            this.dashboardButton.Size = new System.Drawing.Size(200, 50);
+            this.dashboardButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.dashboardButton.Size = new System.Drawing.Size(200, 60);
             this.dashboardButton.TabIndex = 1;
-            this.dashboardButton.Text = "Dashboard";
+            this.dashboardButton.Tag = 0;
+            this.dashboardButton.Text = "   Dashboard";
             this.dashboardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboardButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.dashboardButton.UseVisualStyleBackColor = true;
-            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
-            // 
-            // logoPanel
-            // 
-            this.logoPanel.Controls.Add(this.logoIcon);
+            this.dashboardButton.Click += new System.EventHandler(this.SidebarButton_Click);
+            this.dashboardButton.Paint += new System.Windows.Forms.PaintEventHandler(this.SidebarButton_Paint);
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoPanel.Location = new System.Drawing.Point(0, 0);
             this.logoPanel.Name = "logoPanel";
-            this.logoPanel.Size = new System.Drawing.Size(200, 100);
-            this.logoPanel.TabIndex = 0;
-            // 
-            // logoIcon
-            // 
-            //this.logoIcon.Image = System.Drawing.Image.FromFile("logoIcon.png");  will be added in a later date
-            this.logoIcon.Location = new System.Drawing.Point(50, 10);
-            this.logoIcon.Name = "logoIcon";
-            this.logoIcon.Size = new System.Drawing.Size(100, 80);
-            this.logoIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoIcon.TabIndex = 0;
-            this.logoIcon.TabStop = false;
-            // 
-            // mainPanel
-            // 
+            this.logoPanel.Size = new System.Drawing.Size(200, 40);
+            this.logoPanel.TabIndex = 0; 
             this.mainPanel.Controls.Add(this.tabControl);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(200, 40);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(800, 450);
-            this.mainPanel.TabIndex = 5;
-            // 
-            // MainForm
-            // 
+            this.mainPanel.Size = new System.Drawing.Size(784, 421);
+            this.mainPanel.TabIndex = 5; 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(1000, 622);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(984, 623);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.logPanel);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.sidebarPanel);
             this.Controls.Add(this.headerPanel);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -934,20 +773,20 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl.ResumeLayout(false);
             this.dashboardTab.ResumeLayout(false);
-            this.dashboardMainPanel.ResumeLayout(false);
-            this.launchPanel.ResumeLayout(false);
-            this.actionsPanel.ResumeLayout(false);
-            this.gameInfoGroupBox.ResumeLayout(false);
-            this.gameInfoGroupBox.PerformLayout();
+            this.actionsCard.ResumeLayout(false);
+            this.gameInfoCard.ResumeLayout(false);
+            this.gameInfoCard.PerformLayout();
             this.modsTab.ResumeLayout(false);
-            this.modsTab.PerformLayout();
             this.modControlPanel.ResumeLayout(false);
+            this.searchPanel.ResumeLayout(false);
+            this.searchPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchIcon)).EndInit();
             this.settingsTab.ResumeLayout(false);
-            this.settingsPanel.ResumeLayout(false);
-            this.settingsPanel.PerformLayout();
+            this.settingsCard.ResumeLayout(false);
+            this.settingsCard.PerformLayout();
             this.creditsTab.ResumeLayout(false);
-            this.creditsPanel.ResumeLayout(false);
-            this.creditsPanel.PerformLayout();
+            this.creditsCard.ResumeLayout(false);
+            this.creditsCard.PerformLayout();
             this.logPanel.ResumeLayout(false);
             this.logPanel.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -955,8 +794,6 @@
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
             this.sidebarPanel.ResumeLayout(false);
-            this.logoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoIcon)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -974,10 +811,8 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel statusLabel;
         private System.Windows.Forms.ToolStripProgressBar progressBar;
-        private System.Windows.Forms.ToolStripStatusLabel versionLabel;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.Panel dashboardMainPanel;
-        private System.Windows.Forms.GroupBox gameInfoGroupBox;
+        private System.Windows.Forms.Panel gameInfoCard;
         private System.Windows.Forms.Button btnBrowseGame;
         private System.Windows.Forms.Label lblGameVersion;
         private System.Windows.Forms.Label lblGamePath;
@@ -985,10 +820,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel actionsPanel;
+        private System.Windows.Forms.Panel actionsCard;
         private System.Windows.Forms.Button btnInstallMenu;
         private System.Windows.Forms.Button btnInstallBepInEx;
-        private System.Windows.Forms.Panel launchPanel;
         private System.Windows.Forms.Button btnLaunchGame;
         private System.Windows.Forms.Panel modControlPanel;
         private System.Windows.Forms.Button btnRefreshMods;
@@ -1001,15 +835,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.Panel settingsPanel;
-        private System.Windows.Forms.CheckBox chkAutoInstallUpdates;
-        private System.Windows.Forms.CheckBox chkDarkTheme;
-        private System.Windows.Forms.CheckBox chkStartWithWindows;
-        private System.Windows.Forms.CheckBox chkAutoUpdate;
+        private System.Windows.Forms.Panel settingsCard;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnResetSettings;
         private System.Windows.Forms.Button btnSaveSettings;
-        private System.Windows.Forms.Panel creditsPanel;
+        private System.Windows.Forms.Panel creditsCard;
         private System.Windows.Forms.Label lblCreditsTitle;
         private System.Windows.Forms.Label lblCreditsText;
         private System.Windows.Forms.Button btnDiscord;
@@ -1022,11 +852,20 @@
         private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.Panel sidebarPanel;
         private System.Windows.Forms.Panel logoPanel;
-        private System.Windows.Forms.PictureBox logoIcon;
         private System.Windows.Forms.Button dashboardButton;
         private System.Windows.Forms.Button creditsButton;
         private System.Windows.Forms.Button settingsButton;
         private System.Windows.Forms.Button modsButton;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Panel searchPanel;
+        private System.Windows.Forms.PictureBox searchIcon;
+        private System.Windows.Forms.Label label7;
+        private ToggleButton toggleAutoInstallUpdates;
+        private System.Windows.Forms.Label label6;
+        private ToggleButton toggleDarkTheme;
+        private System.Windows.Forms.Label label5;
+        private ToggleButton toggleStartWithWindows;
+        private System.Windows.Forms.Label label4;
+        private ToggleButton toggleAutoUpdate;
     }
 }
